@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MessageContainer = styled.div`
+export const MainMessage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,5 +16,9 @@ export const MessageContainer = styled.div`
     display: block;
     margin-bottom: 0.5em;
     font-size: 1.2rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 4vw;
   }
 `;

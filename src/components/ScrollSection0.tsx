@@ -1,15 +1,16 @@
 import React from "react";
-import ScrollSection from "./ScrollSection";
-import { css, styled } from "styled-components";
-import { MessageContainer } from "./MessageContainer";
+import { styled } from "styled-components";
+import { MainMessage } from "./MainMessage";
 
-const StyleSection1 = css`
+const Section0Container = styled.section`
+  padding-top: 50vh;
   font-size: 4rem;
   text-align: center;
-`;
-
-const ScrollSection1 = styled(ScrollSection)`
-  ${StyleSection1}
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 9vw;
+    }
+  }
 `;
 
 interface IMessage {
@@ -20,19 +21,19 @@ const Messages = ({ messages }: IMessage) => {
   return (
     <>
       {messages.map(({ message1, message2 }, index) => (
-        <MessageContainer key={index}>
+        <MainMessage key={index}>
           <p>
             {message1}
             <br />
             {message2}
           </p>
-        </MessageContainer>
+        </MainMessage>
       ))}
     </>
   );
 };
 
-const Section1 = () => {
+const ScrollSection0 = () => {
   const messages = [
     { message1: "온전히 빠져들게 하는", message2: "최고급 세라믹" },
     { message1: "주변 맛을 느끼게 해주는", message2: "주변 맛 허용 모드" },
@@ -41,11 +42,11 @@ const Section1 = () => {
   ];
 
   return (
-    <ScrollSection1>
+    <Section0Container>
       <h1>AirMug Pro</h1>
       <Messages messages={messages} />
-    </ScrollSection1>
+    </Section0Container>
   );
 };
 
-export default Section1;
+export default ScrollSection0;

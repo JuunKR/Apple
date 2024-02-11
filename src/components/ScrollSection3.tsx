@@ -3,21 +3,31 @@ import ScrollSection from "./ScrollSection";
 import styled from "styled-components";
 
 const MidMessage = styled.p`
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0 1rem;
   font-size: 2rem;
   color: #888;
   strong {
     color: rgb(29, 29, 31);
   }
+  @media (min-width: 1024px) {
+    font-size: 4vw;
+  }
 `;
 
 const ConvasCaption = styled.p`
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0 1rem;
   font-size: 1.2rem;
   color: #888;
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
 `;
 
-const Section3 = () => {
+const ScrollSection3 = () => {
   return (
     <ScrollSection>
       <MidMessage>
@@ -36,4 +46,4 @@ const Section3 = () => {
   );
 };
 
-export default Section3;
+export default ScrollSection3;

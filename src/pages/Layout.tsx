@@ -1,16 +1,18 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Section1 from "../components/Section1";
-import Section2 from "../components/Section2";
-import Section3 from "../components/section3";
+import ScrollSection0 from "../components/ScrollSection0";
+import ScrollSection1 from "../components/ScrollSection1";
+import ScrollSection2 from "../components/ScrollSection2";
+import ScrollSection3 from "../components/ScrollSection3";
 const Layout = () => {
   return (
     <>
       <Header></Header>
-      <Section1></Section1>
-      <Section2></Section2>
-      <Section3></Section3>
+      <ScrollSection0 />
+      <ScrollSection1 />
+      <ScrollSection2 />
+      <ScrollSection3 />
       <Footer></Footer>
     </>
   );
